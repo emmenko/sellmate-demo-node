@@ -21,7 +21,7 @@ body {
   font-family: 'Trebuchet MS', 'Helvetica New', Helvetica, Arial, sans-serif;
 }
 header {
-  padding: 50px 10px;
+  padding: 40px 10px;
   color: #fff;
   font-size: 25px;
   text-align: center;
@@ -40,11 +40,17 @@ header.nav-inner {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1996d3), to(#1996d3));
   background-image: -webkit-linear-gradient(top, #1996d3, #1996d3);
   background-image: -o-linear-gradient(top, #1996d3, #1996d3);
-  background-image: linear-gradient(top, #1996d3, #1996d3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1996d3), color-stop(1, #1996d3));
+  background-image: -webkit-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -moz-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -o-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -ms-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: linear-gradient(top, #1996d3 0%, #1996d3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.Gradient(StartColorstr=#1996d3, EndColorstr=#1996d3, GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   border-bottom: 1px solid #fff;
 }
