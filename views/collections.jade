@@ -1,0 +1,21 @@
+extend layout
+
+block content
+
+	// breadcrumb
+	div
+		ul.breadcrumb
+			li Collections
+	// / breadcrumb
+	each collection in collections
+		div.item
+			a(href='/collections/#{collection.id}')
+				div.image
+					if (typeof collection.featured_image === 'undefined' || collection.featured_image == null)
+						img(src='http://placehold.it/150x150')
+					else
+						img(src='#{collection.featured_image.url}=s150')
+				div.info
+					p #{collection.title}
+					p Number of products: #{collection.num_of_products}
+				div.clear

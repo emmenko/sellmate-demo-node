@@ -1,0 +1,322 @@
+body {
+  	padding: 50px;
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#container {
+    margin: 20px auto 0;
+    width: 990px;
+}
+
+ul#navigation {
+  margin: 0; padding: 0.8em;
+  text-align: center;
+}
+
+ul#navigation li {
+  	list-style: none;
+  	display: inline;
+	margin: 0.4em;
+	padding: 0;
+}
+
+.product-list {
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0 0 20px;
+}
+
+.product-list li {
+    border: 1px solid #F2F2F2;
+    display: block;
+    float: left;
+    height: 225px;
+    margin: 10px 10px 0 0;
+    position: relative;
+    position: relative;
+    width: 180px;
+	cursor: pointer;
+}
+
+.product-list li div.image {
+    background-color: #FFFFFF;
+    height: 195px;
+    text-align: center;
+}
+
+.product-list li div.image img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin: 10px 10px 0;
+    min-height: 150px;
+    overflow: hidden;
+    padding: 0;
+    width: 160px;
+}
+
+.product-list li:hover {
+    border: 1px solid #CCCCCC;
+}
+
+.product-list li div.image .title {
+    color: #474747;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    height: 45px;
+    line-height: 14px;
+    margin: 0 10px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.product-list li .price {
+    border-top: 1px solid #F2F2F2;
+    font-size: 11px;
+    padding: 5px 10px;
+}
+
+.product-list li .price strong {
+    display: inline;
+    float: right;
+    margin-top: 1px;
+}
+
+.group:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#product #big-image {
+    clear: both;
+    float: left;
+    min-height: 375px;
+    padding: 20px;
+    text-align: center;
+    width: 415px;
+}
+
+#product #images {
+    border-top: 1px solid #E8E8E8;
+    clear: both;
+    float: left;
+    padding: 20px 0 0;
+    width: 385px;
+}
+
+#product #images li {
+    float: left;
+    padding: 0 0 20px 20px;
+}
+
+#product #images ul,  #product #variants fieldset ol, #product #description ul.vendor-category, #collection ol.product-list {
+    list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+#product #variants fieldset ol li {
+	padding: 5px 0;
+}
+
+#product #description.full {
+    height: auto;
+    overflow: visible;
+}
+
+#product #variants fieldset {
+    border: 0 none;
+    padding: 20px;
+}
+
+#product #description {
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-left: 1px solid #E8E8E8;
+    border-top: 1px solid #E8E8E8;
+    color: #6D6D6D;
+    float: left;
+    font-size: 11px;
+    line-height: 16px;
+    min-height: 250px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: 562px;
+}
+
+#product #info {
+    float: left;
+    height: 150px;
+    padding: 20px 0 0;
+    position: relative;
+    width: 433px;
+}
+
+#product #info small {
+    color: #999999;
+    display: block;
+    font-size: 11px;
+}
+
+#product #info #starts-at {
+    bottom: 0;
+    left: 20px;
+    position: absolute;
+	font-size: 16px;
+}
+
+#product h1 {
+	margin: 0;
+    padding: 0 20px 0;
+}
+
+#product small {
+    padding: 0 20px 20px;
+}
+
+#product #variants {
+    float: left;
+    width: 433px;
+}
+
+#product #variants fieldset label select {
+    width: 320px;
+}
+
+#product #description .vendor-category {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#product #description .vendor-category li {
+    color: #6D6D6D;
+    display: inline;
+    margin: 0 0 0 10px;
+}
+
+.header4 {
+	font-size: 16px;
+	display: block;
+	padding-bottom: 20px;
+	color: black;
+}
+
+
+/* The important stuffs. The ones that you should copy-paste and use. */
+.paginate {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.paginate ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.paginate li {
+  display: inline;
+  margin: 2px;
+}
+.paginate a {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  margin: 1px 2px;
+  padding: 5px 10px;
+  display: inline-block;
+  border-top: 1px solid #fff;
+  text-decoration: none !important;
+  color: #717171 !important;
+  font-size: smaller !important;
+  font-family: "Helvetica Neueu", Helvetica, Arial, sans-serif;
+  text-shadow: white 0 1px 0;
+  background-color: #f5f5f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#eaeaea));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #eaeaea);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(top, #f9f9f9, #eaeaea);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #f9f9f9, #eaeaea);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #f9f9f9, #eaeaea);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #f9f9f9, #eaeaea);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9f9f9', EndColorStr='#eaeaea');
+  /* IE6–IE9 */
+}
+.paginate a:first-child, .paginate a.first {
+  margin-left: 0;
+}
+.paginate a:last-child, .paginate a.last {
+  margin-right: 0;
+}
+.paginate a:hover, .paginate a:focus {
+  border-color: #fff;
+  background-color: #fdfdfd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fafafa));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #fefefe, #fafafa);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(top, #fefefe, #fafafa);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #fefefe, #fafafa);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #fefefe, #fafafa);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #fefefe, #fafafa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fefefe', EndColorStr='#fafafa');
+  /* IE6–IE9 */
+}
+.paginate a.more {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border: 0 none !important;
+  background: transparent !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+.paginate a.active {
+  -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.75);
+  -o-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.75);
+  border-color: #505050 !important;
+  color: #f2f2f2 !important;
+  text-shadow: black 0 1px 0;
+  background-color: #676767;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5f5f5f), to(#5c5c5c));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #5f5f5f, #5c5c5c);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(top, #5f5f5f, #5c5c5c);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #5f5f5f, #5c5c5c);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #5f5f5f, #5c5c5c);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #5f5f5f, #5c5c5c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#5f5f5f', EndColorStr='#5c5c5c');
+  /* IE6–IE9 */
+}
+
+

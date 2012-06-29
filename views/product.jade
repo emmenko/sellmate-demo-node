@@ -1,0 +1,51 @@
+extend layout
+
+block content
+
+	// breadcrumb
+	div
+		ul.breadcrumb
+			li 
+				a(href='/products') Products
+				span.divider &rsaquo;
+			li.active #{product.title}
+	// / breadcrumb
+	// product
+	div.row-fluid
+		div.span7
+			div.image
+				if (typeof product.featured_image === 'undefined' || product.featured_image == null)
+					img(src='http://placehold.it/150x150')
+				else
+					a(href='#{product.featured_image.url}')
+						img(src='#{product.featured_image.url}=s340')
+			div.gallery
+				ul
+					each i in images
+						li.image
+							a(href='#{i.url}')
+								img(src='#{i.url}=s80')
+		div.span5
+			div.price
+				- var price_min = 0
+					each v in product.variants
+						if (v.price > price_min)
+							- price_min = v.price
+					div starts at 
+						b € #{price_min}
+					div.tax + Tax & Shipping Costs
+			div.variants
+				select
+					each v in product.variants
+						- var options = '';
+						- options = v.option1 != null ? v.option1 : '' 
+						-		+ v.option2 != null ? '-' + v.option2 : '' 
+						-		+ v.option3 != null ? '-' + v.option3 : ''
+						- 		+ ' € ' + v.price;
+						option #{options}
+
+			div.line-divider
+			div.description
+				h2 Description
+				div #{product.description}
+	// / product

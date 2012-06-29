@@ -1,0 +1,261 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+a {
+  color: #4d4d4d;
+}
+.clear {
+  clear: both;
+}
+body {
+  font-family: 'Trebuchet MS', 'Helvetica New', Helvetica, Arial, sans-serif;
+}
+header {
+  padding: 50px 10px;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #fa5b4d;
+  border-bottom: 1px solid #df1806;
+}
+header.nav-inner {
+  padding: auto 20px;
+  background-color: #1996d3;
+  background-image: -moz-linear-gradient(top, #1996d3, #1996d3);
+  background-image: -ms-linear-gradient(top, #1996d3, #1996d3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1996d3), to(#1996d3));
+  background-image: -webkit-linear-gradient(top, #1996d3, #1996d3);
+  background-image: -o-linear-gradient(top, #1996d3, #1996d3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1996d3), color-stop(1, #1996d3));
+  background-image: -webkit-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -moz-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -o-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: -ms-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-image: linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorstr=#1996d3, EndColorstr=#1996d3, GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
+  border-bottom: 1px solid #fff;
+}
+nav {
+  width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+nav ul {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  list-style: disc;
+  padding: 10px;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  border: 1px solid #ccc;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-bottom: none;
+  margin-right: 5px;
+  margin-bottom: 1px;
+}
+nav ul li a.active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1996d3;
+}
+nav ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #1996d3;
+}
+.container {
+  width: 600px;
+  margin: 20px auto 50px;
+  overflow: hidden;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.item {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #eee;
+  margin: 10px;
+}
+.item a,
+.item a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.item .image {
+  display: block;
+  min-height: 150px;
+  max-height: 150px;
+}
+.item .info {
+  display: block;
+  padding: 10px 5px;
+}
+.item .info p {
+  font-size: 0.9em;
+  margin: 0;
+}
+.item .info p.right {
+  text-align: right;
+}
+.breadcrumb a {
+  text-decoration: underline;
+}
+.gallery {
+  position: relative;
+}
+.gallery > ul {
+  list-style: none;
+  padding: 0 13px;
+}
+.gallery > ul > li {
+  display: inline-block;
+}
+.span5 .price {
+  margin: 20px 0;
+  text-align: right;
+  font-size: 12px;
+}
+.span5 .price b {
+  font-size: 20px;
+}
+.span5 .price .tax {
+  font-size: 12px;
+  color: #6d6d6d;
+  font-style: italic;
+}
+.span5 .variants {
+  margin: 20px 0;
+  text-align: right;
+}
+.span5 .line-divider {
+  border-bottom: 1px solid #eee;
+  padding-top: 10px;
+}
+.span5 .description {
+  margin: 20px 0;
+}
+p {
+  line-height: 1.8;
+}
+footer {
+  width: 600px;
+  margin: 50px auto;
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+  font-size: 13px;
+}
