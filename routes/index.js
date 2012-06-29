@@ -6,25 +6,27 @@ var oa = new OAuth2(Config.client_id, Config.client_secret, Config.redirect_uri,
 
 // Request coming from '/'
 exports.index = function(req, res) {
-	var product = {
-		title: 'my product test',
-		vendor: 'apple'
-	};
+	console.log("index router");
+	var shop = '';
+	if (req.session._shop) {
+		shop = req.session._shop
+	}
 	res.render('index', {
-		title: 'Home',
-		currentURL: req.path
+		shop: shop,
+		currentURL: '/'
 	});
 };
 
 // Request coming from '/callback'
 exports.callback = function(req, res) {
-	var code = req.query['code'];
-	var nextUrl = req.query['state'];
+	var code = req.query['code'],
+		nextUrl = req.query['state'],
+		shop = req.query['shop'];
 	console.log("Callback received with code: " + code);
 
 	// Request an AccessToken
 	oa.getAccessToken(code, {
-		'shop': Config.shop,
+		'shop': req.session._shop,
 		'grant_type': Config.grant_type_auth,
 	}, function(error, response, body) {
 		console.log("Body: " + body);

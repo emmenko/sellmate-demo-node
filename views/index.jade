@@ -1,16 +1,27 @@
 extend layout
 
 block content
-  p 
-    | This application was implemented using the following technologies:
-  ul
-    li  
-      a(href="http://www.sellmate.com") Sellmate REST API
-    li
-      a(href="http://nodejs.org") node.js
-    li
-      a(href="http://expressjs.com")  express
-    li
-      a(href="http://jade-lang.com/") jade
-    li
-      a(href="http://learnboost.github.com/stylus/") stylus
+
+    if (shop != '')
+        p You are using the following shop: #{shop}
+    else
+        p You are not connected to any shop now
+
+    form(action='/', method='post').well
+        p Insert the namespace (shop) that you want to access
+        input(type='text', name='shop', placeholder='Namespace / Shop')
+
+    blockquote
+        p 
+            | This application was implemented using the following technologies:
+        ul
+            li  
+                a(href="http://www.sellmate.com") Sellmate REST API
+            li
+                a(href="http://nodejs.org") node.js
+            li
+                a(href="http://expressjs.com")  express
+            li
+                a(href="http://jade-lang.com/") jade
+            li
+                a(href="http://learnboost.github.com/stylus/") stylus

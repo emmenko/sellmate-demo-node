@@ -8,7 +8,6 @@ exports.host_auth = 'auth.sellmatepages.com';
 exports.response_type = 'code';
 exports.grant_type_auth = 'authorization_code';
 exports.grant_type_refresh = 'refresh_token';
-exports.shop = 'test';
 exports.client_id = settings.client_id;
 
 exports.client_secret = settings.client_secret;
@@ -16,4 +15,4 @@ exports.redirect_uri = settings.redirect_uri;
 
 exports.pageLimit = 25;
 
-exports.shopUrl = 'http://' + this.host_api + '/' + this.shop;
+exports.shopUrl = 'http://' + this.host_api + '/';

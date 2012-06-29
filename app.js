@@ -98,6 +98,15 @@ function compile(str, path) {
 /**
  * Define app routes
  */
+ app.all('/', function(req, res, next) {
+    if (!req.session._shop) {
+        console.log("rendering index");
+        req.shop = 'You need to insert a shop to access'
+    } else {
+        console.log("shop: " + req.session._shop);
+    }
+    next();
+});
 app.get('/', routes.index);
 app.get('/callback', routes.callback);
 app.get('/products/page/:pageProd([0-9]+)', routes.products);
@@ -111,6 +120,18 @@ app.get('/collections', function(req, res) {
     res.redirect('/collections/page/1');
 });
 
+app.post('/', function(req, res, next) {
+    var shop = req.body.shop;
+    console.log(shop);
+    if (shop == '') {
+        console.log("shop null...redirecting");
+    } else {
+        console.log("saving shop in session");
+        req.session._shop = shop;
+        req.session.oauth_access_token = null;
+    }
+    res.redirect('/');
+});
 // This will create a product and redirect to the his page
 app.post('/products', Product.create, function(err, response, product) {
     if (response.statusCode == 200) {
@@ -138,10 +159,15 @@ app.get('/*', function(req, res){
 function canFetchResource(req, res) {
     console.log("Checking auth_token...");
     if (!req.session.oauth_access_token) {
-        var authUrl = oa.getAuthorizeUrl({
-            'shop': Config.shop,
-            'state': req.path
-        });
+        var params = {
+            state: req.path
+        }
+        console.log("checking shop in session: " + req.session._shop);
+        if (req.session._shop) {
+            params['shop'] = req.session._shop;
+        }
+        var authUrl = oa.getAuthorizeUrl(params);
+        
         console.log("Getting auth url: " + authUrl);
         res.redirect(authUrl);
     } else
