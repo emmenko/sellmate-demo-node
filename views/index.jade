@@ -2,26 +2,25 @@ extend layout
 
 block content
 
-    if (shop != '')
-        p You are using the following shop: #{shop}
-    else
-        p You are not connected to any shop now
-
-    form(action='/', method='post').well
-        p Insert the namespace (shop) that you want to access
-        input(type='text', name='shop', placeholder='Namespace / Shop')
+    form(action='/', method='post').well.form-search
+        label(style='display:block;') Insert the namespace (shop) that you want to access:
+        input(type='text', name='shop', placeholder='Namespace / Shop').form-inline
+        button(type='submit').btn Connect
+        if (shop != '')
+            div Connected with the shop: #{shop}
+        else
+            div You are not connected to any shop now.
 
     blockquote
-        p 
-            | This application was implemented using the following technologies:
+        p This application was implemented using the following technologies:
         ul
             li  
                 a(href="http://www.sellmate.com") Sellmate REST API
             li
-                a(href="http://nodejs.org") node.js
+                a(href="http://nodejs.org") node.js (v0.6.19)
             li
-                a(href="http://expressjs.com")  express
+                a(href="http://expressjs.com")  express (v3.0.0.beta4)
             li
-                a(href="http://jade-lang.com/") jade
+                a(href="http://jade-lang.com/") jade (v0.26.3)
             li
-                a(href="http://learnboost.github.com/stylus/") stylus
+                a(href="http://learnboost.github.com/stylus/") stylus (v0.27.2) 
