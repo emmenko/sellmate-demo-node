@@ -38,7 +38,8 @@
     "nib": "0.5.x",
     "request": "2.9.x",
     "randomstring": "1.0.x",
-    "buffertools": "1.1.x"
+    "buffertools": "1.1.x",
+    "sellmate-utils": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {}

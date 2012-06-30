@@ -1,6 +1,6 @@
 // Module dependencies
 var Config 	= require('../config'),
-	OAuth2 	= require('../../sellmate-utils').OAuth2;
+	OAuth2 	= require('sellmate-utils').OAuth2;
 
 var oa = new OAuth2(Config.client_id, Config.client_secret, Config.redirect_uri, Config.host_auth);
 
