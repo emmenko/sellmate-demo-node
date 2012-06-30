@@ -1,7 +1,7 @@
 var settings = require('./properties.js').settings;
 
-exports.host_api: 'http://api.sellmate.com';
-exports.host_auth: 'https://auth.sellmate.com';
+exports.host_api = 'http://api.sellmate.com';
+exports.host_auth = 'https://auth.sellmate.com';
 
 exports.response_type = 'code';
 exports.grant_type_auth = 'authorization_code';
