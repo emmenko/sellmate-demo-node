@@ -2,6 +2,11 @@ extend layout
 
 block content
 
+    div.alert.alert-info 
+        | This is a Demo App used as an example for the Sellmate REST API. It connects with the resources of your
+        | shop (you need to be a Merchant/Developer of Sellmate) using OAuth 2. 
+        | Just type a shop namespace that you want to access (you'll get asked to login) and you can show your
+        | products and collections. 
     form(action='/', method='post').well.form-search
         label(style='display:block;') Insert the namespace (shop) that you want to access:
         input(type='text', name='shop', placeholder='Namespace / Shop').form-inline
@@ -11,9 +16,10 @@ block content
         else
             div.connect.off You are not connected to any shop now.
 
-    h2 How to get started
-    p Download the source code from Github
-    pre.prettyprint git://github.com/emmenko/sellmate-demo-node.git
+    div.alert.alert-block
+        | Visit the 
+        a(href='https://github.com/emmenko/sellmate-demo-node') Github project page
+        |  for more info
 
     blockquote
         p 
