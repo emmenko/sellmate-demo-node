@@ -9,7 +9,7 @@
     "api",
     "oauth"
   ],
-  "version": "1.1.0",
+  "version": "1.0.0",
   "author": {
     "name": "Nicola Molinari",
     "email": "nicola.molinari@commercetools.de"
@@ -22,7 +22,7 @@
   ],
   "private": true,
   "engines": [
-    "node >= 0.3.6"
+    "node >= 0.6.0"
   ],
   "directories" : { 
     "lib" : "./lib" 
@@ -32,13 +32,13 @@
     "test": "node tests/run.js"
   },
   "dependencies": {
-    "express": "*",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*",
-    "request": "*",
-    "randomstring": "*",
-    "buffertools": "*"
+    "express": "3.0.x",
+    "jade": "0.26.x",
+    "stylus": "0.27.x",
+    "nib": "0.5.x",
+    "request": "2.9.x",
+    "randomstring": "1.0.x",
+    "buffertools": "1.1.x"
   },
   "devDependencies": {},
   "optionalDependencies": {}
