@@ -78,12 +78,12 @@ app.use(function(err, req, res, next) {
  * Configure environment settings
  */
 app.configure('development', function(){
-    console.log("using config for 'development'");
+    console.log("Using config for 'development'");
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-    console.log("using config for 'production'");
+    console.log("Using config for 'production'");
     app.use(express.errorHandler({ dumpExceptions: true }));
 });
 
@@ -98,15 +98,6 @@ function compile(str, path) {
 /**
  * Define app routes
  */
- app.all('/', function(req, res, next) {
-    if (!req.session._shop) {
-        console.log("rendering index");
-        req.shop = 'You need to insert a shop to access'
-    } else {
-        console.log("shop: " + req.session._shop);
-    }
-    next();
-});
 app.get('/', routes.index);
 app.get('/callback', routes.callback);
 app.get('/products/page/:pageProd([0-9]+)', routes.products);
@@ -123,10 +114,7 @@ app.get('/collections', function(req, res) {
 app.post('/', function(req, res, next) {
     var shop = req.body.shop;
     console.log(shop);
-    if (shop == '') {
-        console.log("shop null...redirecting");
-    } else {
-        console.log("saving shop in session");
+    if (shop != '') {
         req.session._shop = shop;
         req.session.oauth_access_token = null;
     }
@@ -157,18 +145,15 @@ app.get('/*', function(req, res){
  */
 
 function canFetchResource(req, res) {
-    console.log("Checking auth_token...");
     if (!req.session.oauth_access_token) {
         var params = {
             state: req.path
         }
-        console.log("checking shop in session: " + req.session._shop);
         if (req.session._shop) {
             params['shop'] = req.session._shop;
         }
         var authUrl = oa.getAuthorizeUrl(params);
         
-        console.log("Getting auth url: " + authUrl);
         res.redirect(authUrl);
     } else
         return true;
@@ -176,8 +161,6 @@ function canFetchResource(req, res) {
 
 // Fetch a product
 app.param('productId', function(req, res, next, id) {
-    console.log("Loading product with id: " + id);
-    
     if (canFetchResource(req, res)) {
         Product.load(id, req, function(err, response, product) {
             if (response.statusCode == 200) {
@@ -191,8 +174,6 @@ app.param('productId', function(req, res, next, id) {
 });
 // Fetch the product images
 app.param('productId', function(req, res, next, id) {
-    console.log("Loading images for product with id: " + id);
-    
     if (canFetchResource(req, res)) {
         Product.loadImages(id, req, function(err, response, images) {
             if (response.statusCode == 200) {
@@ -206,7 +187,6 @@ app.param('productId', function(req, res, next, id) {
 });
 // Count the products
 app.param('pageProd', function(req, res, next, page) {
-    
     if (canFetchResource(req, res)) {
         Product.count(req, function(err, response, count) {
             if (response.statusCode == 200) {
@@ -236,9 +216,7 @@ app.param('pageProd', function(req, res, next, page) {
 
 
 // Fetch a collection
-app.param('collectionId', function(req, res, next, id) {
-    console.log("Loading collection with id: " + id);
-    
+app.param('collectionId', function(req, res, next, id) { 
     if (canFetchResource(req, res)) {
         Collection.load(id, req, function(err, response, collection) {
             if (response.statusCode == 200) {
@@ -252,8 +230,6 @@ app.param('collectionId', function(req, res, next, id) {
 });
 // Fetch products by a collection
 app.param('collectionId', function(req, res, next, id) {
-    console.log("Loading products in the collection with id: " + id);
-    
     if (canFetchResource(req, res)) {
         Product.listByCollection(id, req, function(err, response, products) {
             if (response.statusCode == 200) {
@@ -267,7 +243,6 @@ app.param('collectionId', function(req, res, next, id) {
 });
 // Count the collections
 app.param('pageColl', function(req, res, next, page) {
-    
     if (canFetchResource(req, res)) {
         Collection.count(req, function(err, response, count) {
             if (response.statusCode == 200) {

@@ -36,8 +36,8 @@ exports.callback = function(req, res) {
 		if (response.statusCode == 200) {
 			// Save the tokens
 			req.session.oauth_access_token = json_body.access_token;
+			req.session.oauth_mac_key = json_body.mac_key; // Important to create the mac auth header
 			//req.session.oauth_refresh_token = json_body.refresh_token;
-			//req.session.oauth_mac_key = json_body.mac_key;
 			//req.session.oauth_lifetime = new Date().getTime(); // Time of when the access token was generated
 
 			res.redirect(nextUrl);
