@@ -36,13 +36,13 @@ exports.callback = function(req, res) {
 		if (response.statusCode == 200) {
 			// Save the tokens
 			req.session.oauth_access_token = json_body.access_token;
-			req.session.oauth_refresh_token = json_body.refresh_token;
-			req.session.oauth_mac_key = json_body.mac_key;
-			req.session.oauth_lifetime = new Date().getTime(); // Time of when the access token was generated
+			//req.session.oauth_refresh_token = json_body.refresh_token;
+			//req.session.oauth_mac_key = json_body.mac_key;
+			//req.session.oauth_lifetime = new Date().getTime(); // Time of when the access token was generated
 
 			res.redirect(nextUrl);
 		} else {
-			throw new Error('Failed to get Request Token. Response code: ' + response.statusCode);
+			throw new Error('Failed to get Request Token. ' + json_body);
 			// Do something else like requesting a new access_token or grant_code
 		}
 	});
