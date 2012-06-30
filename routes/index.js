@@ -22,7 +22,8 @@ exports.callback = function(req, res) {
 	var code = req.query['code'],
 		nextUrl = req.query['state'],
 		shop = req.query['shop'];
-	console.log("Callback received with code: " + code);
+	console.log("Callback received with code: " + code + "and shop: " + shop);
+	req.session._shop = shop;
 
 	// Request an AccessToken
 	oa.getAccessToken(code, {

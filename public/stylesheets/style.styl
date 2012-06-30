@@ -17,11 +17,12 @@
  * Store the main color and
  * background color as variables
  */
-main-color = #fa5b4d
-background-color = #faf9f0
+main-color = #4d4d4d
+bkg-color = #1996d3
 
 a
-  color #4d4d4d
+  color main-color
+  cursor pointer
 
 .clear
   clear both
@@ -39,99 +40,88 @@ header
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
-  background-color main-color
-  border-bottom 1px solid darken(main-color, 30%)
+  //background-color main-color
+  //border-bottom 1px solid darken(main-color, 30%)
   //text-shadow 0px -1px 0px darken(main-color, 30%)
 
 header.nav-inner
     padding auto 20px
-    background-color #1996d3
-    background-image -moz-linear-gradient(top, #1996d3, #1996d3)
-    background-image -ms-linear-gradient(top, #1996d3, #1996d3)
-    background-image -webkit-gradient(linear, 0 0, 0 100%, from(#1996d3), to(#1996d3))
-    background-image -webkit-linear-gradient(top, #1996d3, #1996d3)
-    background-image -o-linear-gradient(top, #1996d3, #1996d3)
-    background-image linear-gradient(top, #1996d3, #1996d3)
+    background-color bkg-color
+    background-color linear-gradient(top, bkg-color, bkg-color)
     background-repeat repeat-x
     filter 'progid:DXImageTransform.Microsoft.Gradient(StartColorstr=%s, EndColorstr=%s, GradientType=0)' % (#1996d3 #1996d3)
-    -webkit-box-shadow 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
-    -moz-box-shadow 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
-    box-shadow 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+    box-shadow 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1) 
     border-bottom 1px solid #fff
 
 nav
   width 600px
   margin auto
   overflow hidden
-
-nav ul
-  text-align left
-  border-bottom 1px solid #ccc
-  list-style disc
-  padding 10px
-
-nav ul li
-  display inline
-
-nav ul li a
-  border 1px solid #ccc
-  text-decoration none
-  padding 10px 20px
-  border-bottom none
-  margin-right 5px
-  margin-bottom 1px
-
-nav ul li a.active
-  color #fff
-  text-decoration none
-  background-color #1996d3
-
-nav ul li a:hover
-  color #fff
-  text-decoration none
-  background-color #1996d3
+  ul
+    text-align left
+    border-bottom 1px solid #ccc
+    list-style disc
+    padding 10px
+    li
+      display inline
+      a
+        border 1px solid #ccc
+        text-decoration none
+        padding 10px 20px
+        border-bottom none
+        margin-right 5px
+        margin-bottom 1px
+      a.active
+      a:hover
+        color #fff
+        text-decoration none
+        background-color bkg-color
 
 .container
   width 600px
   margin 20px auto 50px
   overflow hidden
 
-.main-content p
-  margin-bottom 20px
+.main-content 
+  p
+    margin-bottom 20px
+  blockquote 
+    p
+      font-size 13px
+    li i
+      color #aaa
 
-.main-content blockquote p
-  font-size 13px
+form
+  .connect
+    text-align center
+    margin-top 20px
+  .connect.on
+    color #A7D04E
+  .connect.off
+    color #FA5B4D
 
-form div
-  text-align center
-  margin-top 20px
 
 .item
   display inline-block
   padding 10px
   border 1px solid #EEE
   margin 10px
-
-.item a 
-.item a:hover
-  text-decoration none
-  color inherit
-
-.item .image 
-  display block
-  min-height 150px
-  max-height 150px
-
-.item .info 
-  display block
-  padding 10px 5px
-
-.item .info p
-  font-size .9em
-  margin 0
-
-.item .info p.right
-  text-align right
+  a 
+  a:hover
+    text-decoration none
+    color inherit
+  .image 
+    display block
+    min-height 150px
+    max-height 150px
+  .info 
+    display block
+    padding 10px 5px
+  .info p
+    font-size .9em
+    margin 0
+  .info p.right
+    text-align right
 
 
 // Product detail page
@@ -141,37 +131,31 @@ form div
 
 .gallery
   position relative
+  > ul 
+    list-style none 
+    padding 0 13px
+    > li 
+      display inline-block
 
-.gallery > ul 
-  list-style none 
-  padding 0 13px
-
-.gallery > ul > li 
-  display inline-block
-
-.span5 .price
-  margin 20px 0
-  text-align right
-  font-size 12px
-
-.span5 .price b
-  font-size 20px
-
-.span5 .price .tax
-  font-size 12px 
-  color #6D6D6D
-  font-style italic
-
-.span5 .variants
-  margin 20px 0
-  text-align right
-
-.span5 .line-divider
-  border-bottom 1px solid #EEE
-  padding-top 10px
-
-.span5 .description
-  margin 20px 0
+.span5 
+  .price
+    margin 20px 0
+    text-align right
+    font-size 12px
+    b
+      font-size 20px
+    .tax
+      font-size 12px 
+      color #6D6D6D
+      font-style italic
+  .variants
+    margin 20px 0
+    text-align right
+  .line-divider
+    border-bottom 1px solid #EEE
+    padding-top 10px
+  .description
+    margin 20px 0
 
 p
   line-height 1.8

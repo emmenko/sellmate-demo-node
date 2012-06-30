@@ -7,9 +7,9 @@ block content
         input(type='text', name='shop', placeholder='Namespace / Shop').form-inline
         button(type='submit').btn Connect
         if (shop != '')
-            div Connected with the shop: #{shop}
+            div.connect.on Connected with the shop: #{shop}
         else
-            div You are not connected to any shop now.
+            div.connect.off You are not connected to any shop now.
 
     blockquote
         p This application was implemented using the following technologies:
@@ -17,10 +17,14 @@ block content
             li  
                 a(href="http://www.sellmate.com") Sellmate REST API
             li
-                a(href="http://nodejs.org") node.js (v0.6.19)
+                a(href="http://nodejs.org") node.js 
+                    i (v0.6.19)
             li
-                a(href="http://expressjs.com")  express (v3.0.0.beta4)
+                a(href="http://expressjs.com")  express 
+                    i (v3.0.0.beta4)
             li
-                a(href="http://jade-lang.com/") jade (v0.26.3)
+                a(href="http://jade-lang.com/") jade 
+                    i (v0.26.3)
             li
-                a(href="http://learnboost.github.com/stylus/") stylus (v0.27.2) 
+                a(href="http://learnboost.github.com/stylus/") stylus 
+                    i (v0.27.2) 

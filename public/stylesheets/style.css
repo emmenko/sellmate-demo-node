@@ -13,6 +13,7 @@
  */
 a {
   color: #4d4d4d;
+  cursor: pointer;
 }
 .clear {
   clear: both;
@@ -29,27 +30,18 @@ header {
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
-  background-color: #fa5b4d;
-  border-bottom: 1px solid #df1806;
 }
 header.nav-inner {
   padding: auto 20px;
   background-color: #1996d3;
-  background-image: -moz-linear-gradient(top, #1996d3, #1996d3);
-  background-image: -ms-linear-gradient(top, #1996d3, #1996d3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1996d3), to(#1996d3));
-  background-image: -webkit-linear-gradient(top, #1996d3, #1996d3);
-  background-image: -o-linear-gradient(top, #1996d3, #1996d3);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1996d3), color-stop(1, #1996d3));
-  background-image: -webkit-linear-gradient(top, #1996d3 0%, #1996d3 100%);
-  background-image: -moz-linear-gradient(top, #1996d3 0%, #1996d3 100%);
-  background-image: -o-linear-gradient(top, #1996d3 0%, #1996d3 100%);
-  background-image: -ms-linear-gradient(top, #1996d3 0%, #1996d3 100%);
-  background-image: linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1996d3), color-stop(1, #1996d3));
+  background-color: -webkit-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-color: -moz-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-color: -o-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-color: -ms-linear-gradient(top, #1996d3 0%, #1996d3 100%);
+  background-color: linear-gradient(top, #1996d3 0%, #1996d3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.Gradient(StartColorstr=#1996d3, EndColorstr=#1996d3, GradientType=0);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 -1px 0 rgba(0,0,0,0.1);
   border-bottom: 1px solid #fff;
@@ -76,11 +68,7 @@ nav ul li a {
   margin-right: 5px;
   margin-bottom: 1px;
 }
-nav ul li a.active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #1996d3;
-}
+nav ul li a.active,
 nav ul li a:hover {
   color: #fff;
   text-decoration: none;
@@ -97,17 +85,26 @@ nav ul li a:hover {
 .main-content blockquote p {
   font-size: 13px;
 }
-form div {
+.main-content blockquote li i {
+  color: #aaa;
+}
+form .connect {
   text-align: center;
   margin-top: 20px;
+}
+form .connect.on {
+  color: #a7d04e;
+}
+form .connect.off {
+  color: #fa5b4d;
 }
 .item {
   display: inline-block;
   padding: 10px;
   border: 1px solid #eee;
   margin: 10px;
+a
 }
-.item a,
 .item a:hover {
   text-decoration: none;
   color: inherit;
