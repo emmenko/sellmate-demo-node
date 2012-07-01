@@ -3,9 +3,9 @@ sellmate-demo-node
 
 Demo application that shows how to use the [Sellmate REST API](http://www.sellmate.com) to get/display products and collections of a shop.
 
-To help you access the resources of the Sellmate REST API, you can use the module [sellmate-utils](https://github.com/emmenko/sellmate-utils)
+To help you access the resources of the Sellmate REST API, you can use the module [sellmate-utils](https://github.com/emmenko/sellmate-utils).
 
-You can check out a live example at [link](http://localhost:8888)
+Check out our live [example](http://sellmate-demo.nodester.com/) hosted on nodester.
 
 
 How to get started
