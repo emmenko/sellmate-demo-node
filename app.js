@@ -114,7 +114,6 @@ app.get('/collections', function(req, res) {
 
 app.post('/', function(req, res, next) {
     var shop = req.body.shop;
-    console.log(shop);
     if (shop != '') {
         req.session._shop = shop;
         req.session.oauth_access_token = null;
@@ -276,5 +275,5 @@ app.param('pageColl', function(req, res, next, page) {
  *  App port listener
  */
 app.listen(app_port, function(){
-  console.log("Server listening on port %d in %s mode.\nhttp://localhost:19148", app_port, app.settings.env);
+  console.log("Server listening on port %d in %s mode.\nhttp://localhost:" + app_port, app_port, app.settings.env);
 });

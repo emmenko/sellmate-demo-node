@@ -6,7 +6,6 @@ var oa = new OAuth2(Config.client_id, Config.client_secret, Config.redirect_uri,
 
 // Request coming from '/'
 exports.index = function(req, res) {
-	console.log("index router");
 	var shop = '';
 	if (req.session._shop) {
 		shop = req.session._shop
@@ -22,7 +21,6 @@ exports.callback = function(req, res) {
 	var code = req.query['code'],
 		nextUrl = req.query['state'],
 		shop = req.query['shop'];
-	console.log("Callback received with code: " + code + "and shop: " + shop);
 	req.session._shop = shop;
 
 	// Request an AccessToken
@@ -30,9 +28,7 @@ exports.callback = function(req, res) {
 		'shop': req.session._shop,
 		'grant_type': Config.grant_type_auth,
 	}, function(error, response, body) {
-		console.log("Body: " + body);
 		var json_body = JSON.parse(body);
-		console.log("Status code: " + response.statusCode);
 		if (response.statusCode == 200) {
 			// Save the tokens
 			req.session.oauth_access_token = json_body.access_token;
