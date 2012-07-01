@@ -18,14 +18,14 @@ How to get started
 	$ git clone git://github.com/emmenko/sellmate-demo-node.git
 	```
 
-2. You need to create the `properties.js` file with the settings of the sellmate application that you want to test
+2. You need to edit the `properties.js` file with the settings of the sellmate application that you want to test
 
 	```bash
 	$ cd sellmate-demo-node
-	$ touch properties.js
+	$ vim properties.js
 	```
 
-	Then add the following code and fill the fields with your app's settings
+	Then fill the fields with your app's settings
 
 	```javascript
 	// Sellmate application settings
