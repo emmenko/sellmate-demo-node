@@ -274,6 +274,6 @@ app.param('pageColl', function(req, res, next, page) {
 /**
  *  App port listener
  */
-app.listen(19148, function(){
-  console.log("Server listening on port 19148 in %s mode.\nhttp://localhost:19148", app.settings.env);
+app.listen(process.env['app_port'] || 8888, function(){
+  console.log("Server listening on port %s in %s mode.\nhttp://localhost:19148", process.env['app_port'] || 8888, app.settings.env);
 });
