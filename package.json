@@ -17,10 +17,10 @@
     "lib" : "./lib" 
   },
   "dependencies": {
-    "express": "*",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*",
+    "express": "2.5.x",
+    "jade": "0.26.x",
+    "stylus": "0.27.x",
+    "nib": "0.5.x",
     "sellmate-utils": "*"
   },
   "devDependencies": {},
