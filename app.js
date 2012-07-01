@@ -7,7 +7,8 @@ var express     = require('express'),
     Product     = require('./lib/product'),
     Collection  = require('./lib/collection'),
     Config      = require('./config'),
-    OAuth2      = require('sellmate-utils').OAuth2;
+    OAuth2      = require('sellmate-utils').OAuth2
+    app_port    = process.env['app_port'] || 8888;
 
 var oa = new OAuth2(Config.client_id, Config.client_secret, Config.redirect_uri, Config.host_auth);
 /**
@@ -274,6 +275,6 @@ app.param('pageColl', function(req, res, next, page) {
 /**
  *  App port listener
  */
-app.listen(process.env['app_port'] || 8888, function(){
-  console.log("Server listening on port %s in %s mode.\nhttp://localhost:19148", process.env['app_port'] || 8888, app.settings.env);
+app.listen(app_port, function(){
+  console.log("Server listening on port %d in %s mode.\nhttp://localhost:19148", app_port, app.settings.env);
 });
