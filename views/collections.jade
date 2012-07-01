@@ -12,9 +12,9 @@ block content
 			a(href='/collections/#{collection.id}')
 				div.image
 					if (typeof collection.featured_image === 'undefined' || collection.featured_image == null)
-						img(src='http://placehold.it/150x150')
+						img(src='http://placehold.it/160x160')
 					else
-						img(src='#{collection.featured_image.url}=s150')
+						img(src='#{collection.featured_image.url}=s160')
 				div.info
 					p #{collection.title}
 					p Number of products: #{collection.num_of_products}

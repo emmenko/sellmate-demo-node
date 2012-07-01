@@ -12,9 +12,9 @@ block content
 			a(href='/products/#{product.id}')
 				div.image
 					if (typeof product.featured_image === 'undefined' || product.featured_image == null)
-						img(src='http://placehold.it/150x150')
+						img(src='http://placehold.it/160x160')
 					else
-						img(src='#{product.featured_image.url}=s150')
+						img(src='#{product.featured_image.url}=s160')
 				div.info
 					p #{product.title}
 					p #{product.vendor}
