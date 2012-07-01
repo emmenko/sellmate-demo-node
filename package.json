@@ -1,48 +1,35 @@
 {
-  "name": "sellmate-demo-app",
-  "description": "Demo application that shows how to use the Sellmate REST API to get/display products and collections of a shop",
-  "tags": [
-    "sellmate",
-    "demo",
-    "app",
-    "rest",
-    "api",
-    "oauth"
-  ],
-  "version": "1.0.0",
   "author": {
     "name": "Nicola Molinari",
     "email": "nicola.molinari@commercetools.de"
   },
-  "contributors": [
-    {
-      "name": "Sven Müller",
-      "email": "sven.mueller@commercetools.de"
-    }
-  ],
+  "name": "sellmate-demo",
+  "description": "Demo application that shows how to use the Sellmate REST API to get/display products and collections of a shop",
+  "version": "1.0.0",
+  "private": true,
   "homepage": "http://sellmate-demo.nodester.com",
   "node": "0.6.17",
-  "private": true,
-  "engines": {
-    "node":"*"
-  },
-  "directories" : { 
-    "lib" : "./lib" 
+  "repository": {
+    "url": "defaultapp"
   },
   "main": "app.js",
-  "scripts": {
-    "test": "node tests/run.js"
+  "directories" : { 
+    "lib" : "./lib" 
   },
   "dependencies": {
     "express": "*",
     "jade": "*",
     "stylus": "*",
     "nib": "*",
-    "request": "*",
-    "randomstring": "*",
-    "buffertools": "*",
     "sellmate-utils": "*"
   },
   "devDependencies": {},
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "node tests/run.js"
+  }
 }
