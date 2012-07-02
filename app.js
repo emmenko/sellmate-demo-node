@@ -7,7 +7,7 @@ var express     = require('express'),
     Product     = require('./lib/product'),
     Collection  = require('./lib/collection'),
     Config      = require('./config'),
-    OAuth2      = require('sellmate-utils').OAuth2
+    OAuth2      = require('sellmate-utils').OAuth2,
     app_port    = process.env['app_port'] || 8888;
 
 var oa = new OAuth2(Config.client_id, Config.client_secret, Config.redirect_uri, Config.host_auth);
