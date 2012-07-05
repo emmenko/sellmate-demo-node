@@ -2,26 +2,27 @@ extend layout
 
 block content
 
-	// breadcrumb
-	div
-		ul.breadcrumb
-			li Products
-	// / breadcrumb
-	each product in products
-		div.item
-			a(href='/products/#{product.id}')
-				div.image
-					if (typeof product.featured_image === 'undefined' || product.featured_image == null)
-						img(src='http://placehold.it/160x160')
-					else
-						img(src='#{product.featured_image.url}=s160')
-				div.info
-					p #{product.title}
-					p #{product.vendor}
-					- var price_min = 0
-					each v in product.variants
-						if (v.price > price_min)
-							- price_min = v.price
-					p.right starts at € 
-						b #{price_min}
-				div.clear
+	div.row-fluid
+		// breadcrumb
+		div
+			ul.breadcrumb
+				li Products
+		// / breadcrumb
+		each product in products
+			div.item.span-5
+				a(href='/products/#{product.id}')
+					div.image
+						if (typeof product.featured_image === 'undefined' || product.featured_image == null)
+							img(src='http://placehold.it/160x160')
+						else
+							img(src='#{product.featured_image.url}=s160')
+					div.info
+						p #{product.title}
+						p #{product.vendor}
+						- var price_min = 0
+						each v in product.variants
+							if (price_min == 0 || v.price < price_min)
+								- price_min = v.price
+						p.right starts at € 
+							b #{price_min}
+					div.clear

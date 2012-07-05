@@ -76,7 +76,6 @@ nav ul li a:hover {
   background-color: #1996d3;
 }
 .container {
-  width: 600px;
   margin: 20px auto 50px;
   overflow: hidden;
 }
@@ -107,7 +106,7 @@ form .connect.off {
   min-width: 160px;
   max-width: 160px;
   min-height: 275px;
-  float: left;
+  float: left !important;
 a
 }
 .item a:hover {
@@ -176,4 +175,9 @@ footer {
   border-top: 1px dotted #ccc;
   padding-top: 5px;
   font-size: 13px;
+}
+@media (min-width: 700px) {
+  .container {
+    width: 600px;
+  }
 }

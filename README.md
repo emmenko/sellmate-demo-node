@@ -42,5 +42,5 @@ How to get started
 	$ node app.js
 	```
 
-NB: tokens will only be saved in the session. If you want you can implement a DB (i.e. MongoDB) to save the tokens (e.g. you can save the refresh token the first time the Merchant logs in to avoid that next time he needs to log in again)
+NB: tokens will only be saved in the session. In a real app we reccomend to save the tokens (e.g. you can save the refresh token the first time the Merchant logs in or your app callback is called with the Request token to avoid that next time he needs to log in again)
 
