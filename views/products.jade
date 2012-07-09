@@ -9,13 +9,13 @@ block content
 				li Products
 		// / breadcrumb
 		each product in products
-			div.item.span-5
+			div.item.span5
 				a(href='/products/#{product.id}')
 					div.image
 						if (typeof product.featured_image === 'undefined' || product.featured_image == null)
-							img(src='http://placehold.it/160x160')
+							img(src='http://placehold.it/170x170')
 						else
-							img(src='#{product.featured_image.url}=s160')
+							img(src='#{product.featured_image.url}=s170')
 					div.info
 						p #{product.title}
 						p #{product.vendor}
