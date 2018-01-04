@@ -1,5 +1,6 @@
-sellmate-demo-node
-==================
+<h1 align="center">This repository is deprecated and not maintained anymore</h1>
+
+## sellmate-demo-node
 
 Demo application that shows how to use the [Sellmate REST API](http://www.sellmate.com) to get/display products and collections of a shop.
 
@@ -8,8 +9,7 @@ To help you access the resources of the Sellmate REST API, you can use the modul
 Check out our live [example](http://sellmate-demo.nodester.com/) hosted on nodester.
 
 
-How to get started
-==================
+### How to get started
 
 1. Clone this project
 	```bash
